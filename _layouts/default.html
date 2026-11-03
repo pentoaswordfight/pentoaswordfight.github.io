@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title and page.title != site.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.problem | default: site.description }}">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="site">
+  <a class="name" href="/">{{ site.title }}</a>
+  <span class="role">{{ site.role }}</span>
+</header>
+<main>
+{{ content }}
+</main>
+<footer class="site">{{ site.title }} · <a href="{{ site.linkedin }}">LinkedIn</a></footer>
+</body>
+</html>

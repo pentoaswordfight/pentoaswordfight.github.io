@@ -1,0 +1,11 @@
+title: Deji Dipeolu
+role: Founder and architect, Marginborn
+description: "How I solved problems while I built Marginborn: what I weighed, what I chose, and what I rejected."
+linkedin: https://www.linkedin.com/in/dejidipeolu
+collections:
+  writeups:
+    output: true
+    permalink: /:name/
+defaults:
+  - scope: {type: writeups}
+    values: {layout: writeup}

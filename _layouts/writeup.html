@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<p class="back"><a href="/">← All write-ups</a></p>
+<h1>{{ page.title }}</h1>
+<p class="tags">{% for t in page.tags %}<span class="tag">{{ t }}</span>{% endfor %}</p>
+<dl class="summary">
+  <dt>Problem</dt><dd>{{ page.problem }}</dd>
+  <dt>Decision</dt><dd>{{ page.decision }}</dd>
+  <dt>Rejected</dt><dd>{{ page.rejected }}</dd>
+  {% if page.scale %}<dt>Scale</dt><dd>{{ page.scale }}</dd>{% endif %}
+</dl>
+<article>
+{{ content }}
+</article>

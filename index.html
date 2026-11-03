@@ -1,0 +1,28 @@
+---
+layout: default
+title: Deji Dipeolu
+---
+<p class="intro">How I solved problems while I built <a href="https://marginborn.com">Marginborn</a>: what I weighed, what I chose, and what I rejected.</p>
+
+<h2>Marginborn at a glance</h2>
+<figure class="diagram">
+<div class="scroll">{% include architecture.svg %}</div>
+<p class="hint">Scroll sideways to see the whole diagram.</p>
+<figcaption>The device holds the keys. Sync and storage see user content only as ciphertext; the AI path sees the plaintext a user sends to an AI feature.</figcaption>
+</figure>
+
+{% assign decisions = site.writeups | where: "group", "marginborn" | sort: "order" %}
+{% if decisions.size > 0 %}
+<h2>Decisions</h2>
+<div class="grid">
+{% for w in decisions %}{% include card.html w=w %}{% endfor %}
+</div>
+{% endif %}
+
+{% assign also = site.writeups | where: "group", "also" | sort: "order" %}
+{% if also.size > 0 %}
+<h2>Also built</h2>
+<div class="grid">
+{% for w in also %}{% include card.html w=w %}{% endfor %}
+</div>
+{% endif %}

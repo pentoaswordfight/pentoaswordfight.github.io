@@ -1,0 +1,8 @@
+<a class="card" href="{{ include.w.url }}">
+  <strong>{{ include.w.title }}</strong>
+  <span class="k">Problem</span>
+  <span>{{ include.w.problem }}</span>
+  <span class="k">Decision</span>
+  <span>{{ include.w.decision }}</span>
+  <span class="tags">{% for t in include.w.tags %}<span class="tag">{{ t }}</span>{% endfor %}</span>
+</a>
